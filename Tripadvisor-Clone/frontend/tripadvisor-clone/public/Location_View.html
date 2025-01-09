@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Erstelle Location</title>
+    <link rel="stylesheet" href="css/belegarbeit.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Erstellt ein Navigationsband oben auf der Website-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="Homepage.html">Homepage</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
+
+
+    <div class="container viewLocation">
+        <h1>'Location-Name'</h1>
+        <h2>Bilder</h2>
+            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators" id="indicators"></div>
+                <div class="carousel-inner" id="slides"></div>
+            
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>   <!--Damit buttons funktionieren-->
+            <script>
+                // Fügen Sie hier Ihre Bilder ein
+                const images = [
+                    'pictures/sc_1.png',
+                    'pictures/sc_2.png',
+                    'pictures/sc_3.png'
+                ];
+            
+                // Generiere Indikatoren
+                const indicators = document.getElementById('indicators');
+                const slides = document.getElementById('slides');
+            
+                images.forEach((img, index) => {
+                    // Indikator erstellen
+                    const indicator = document.createElement('button');
+                    indicator.setAttribute('type', 'button');
+                    indicator.setAttribute('data-bs-target', '#imageCarousel');
+                    indicator.setAttribute('data-bs-slide-to', index.toString());
+                    if (index === 0) indicator.classList.add('active');
+                    indicators.appendChild(indicator);
+            
+                    // Slide erstellen
+                    const slide = document.createElement('div');
+                    slide.className = `carousel-item${index === 0 ? ' active' : ''}`;
+                    slide.innerHTML = `<img src="${img}" alt="Slide ${index + 1}">`;
+                    slides.appendChild(slide);
+                });
+            </script>
+        <h2>Description</h2>
+            <div class="container mt-4">
+                <div class="card custom-card">
+                    <div class="card-body custom-card-body">
+                        Anpassbarer Text in einer Bootstrap Box
+                    </div>
+                </div>
+            </div>
+        <h2>What others think..</h2>
+            <div>
+                Hier kommen die Komentare rein.
+            </div>
+    </div>
+
+
+</body>
+</html>
