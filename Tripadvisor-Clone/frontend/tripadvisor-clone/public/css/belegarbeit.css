@@ -1,0 +1,69 @@
+
+
+.createLocation{
+    background-color: grey;
+    text-align: center;
+}
+
+.homepage{
+    background-color: azure;
+    text-align: center; 
+}
+
+.createInput{
+    background-color: papayawhip;
+    text-align: center;
+}
+
+.viewLocation{
+    background-color: papayawhip;
+    text-align: center;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.required{
+    color: red;
+    font-weight: bold;
+}
+
+/*bilder slideshow START*/
+.carousel {
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+.carousel-item {
+    width: 100%;
+    height: 100%;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*bilder slideshow ENDE*/
+
+/*Beschreibungsbox START*/
+.custom-card {
+    width: 90%;
+    border: 2px solid blue;
+    border-radius: 10px;
+    box-shadow: 0 0px 0px goldenrod;
+    margin: 20px auto;
+}
+
+.custom-card-body {
+    padding: 20px;
+    color: black;
+}
+/*Beschreibungsbox ENDE*/
