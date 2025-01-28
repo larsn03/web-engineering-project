@@ -1,3 +1,5 @@
+package com.hszg.demo.model.tripadvisor;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.annotation.Generated;
@@ -13,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "Token"
 })
 @Generated("jsonschema2pojo")
-public class Tokenclass {
+public class TokenClass {
 
     @JsonProperty("Token")
     private String token;
@@ -24,10 +26,10 @@ public class Tokenclass {
      * No args constructor for use in serialization
      * 
      */
-    public Tokenclass() {
+    public TokenClass() {
     }
 
-    public Tokenclass(String token) {
+    public TokenClass(String token) {
         super();
         this.token = token;
     }
@@ -55,7 +57,7 @@ public class Tokenclass {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(Tokenclass.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append(TokenClass.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
         sb.append("token");
         sb.append('=');
         sb.append(((this.token == null)?"<null>":this.token));

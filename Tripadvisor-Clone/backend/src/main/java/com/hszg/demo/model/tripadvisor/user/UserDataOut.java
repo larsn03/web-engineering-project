@@ -1,3 +1,5 @@
+package com.hszg.demo.model.tripadvisor.user;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.annotation.Generated;
@@ -16,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "LastName"
 })
 @Generated("jsonschema2pojo")
-public class AccountInfoUserOut {
+public class UserDataOut {
 
     @JsonProperty("Username")
     private String username;
@@ -33,10 +35,10 @@ public class AccountInfoUserOut {
      * No args constructor for use in serialization
      * 
      */
-    public AccountInfoUserOut() {
+    public UserDataOut() {
     }
 
-    public AccountInfoUserOut(String username, String eMail, String firstName, String lastName) {
+    public UserDataOut(String username, String eMail, String firstName, String lastName) {
         super();
         this.username = username;
         this.eMail = eMail;
@@ -97,7 +99,7 @@ public class AccountInfoUserOut {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(AccountInfoUserOut.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append(UserDataOut.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
         sb.append("username");
         sb.append('=');
         sb.append(((this.username == null)?"<null>":this.username));

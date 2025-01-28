@@ -1,3 +1,5 @@
+package com.hszg.demo.model.tripadvisor.location.locationGET;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.annotation.Generated;
@@ -83,7 +85,7 @@ public class Address {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(Address.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append(com.hszg.demo.model.tripadvisor.location.locationPOST.Address.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
         sb.append("country");
         sb.append('=');
         sb.append(((this.country == null)?"<null>":this.country));

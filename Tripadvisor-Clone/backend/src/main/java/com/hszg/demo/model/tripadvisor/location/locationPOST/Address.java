@@ -1,3 +1,5 @@
+package com.hszg.demo.model.tripadvisor.location.locationPOST;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.annotation.Generated;

@@ -1,3 +1,5 @@
+package com.hszg.demo.model.tripadvisor.location.locationGET;
+
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.hszg.demo.model.tripadvisor.location.locationPOST.Address;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -28,13 +31,13 @@ public class LocInfoLocationOut {
     @JsonProperty("Category")
     private String category;
     @JsonProperty("Address")
-    private Address address;
+    private com.hszg.demo.model.tripadvisor.location.locationPOST.Address address;
     @JsonProperty("Description")
     private String description;
     @JsonProperty("Rating")
     private String rating;
     @JsonProperty("Comments")
-    private Comments comments;
+    private Comment comment;
     @JsonProperty("Pictures")
     private List<String> pictures;
     @JsonProperty("Tags")
@@ -49,14 +52,14 @@ public class LocInfoLocationOut {
     public LocInfoLocationOut() {
     }
 
-    public LocInfoLocationOut(String name, String category, Address address, String description, String rating, Comments comments, List<String> pictures, List<String> tags) {
+    public LocInfoLocationOut(String name, String category, com.hszg.demo.model.tripadvisor.location.locationPOST.Address address, String description, String rating, Comment comment, List<String> pictures, List<String> tags) {
         super();
         this.name = name;
         this.category = category;
         this.address = address;
         this.description = description;
         this.rating = rating;
-        this.comments = comments;
+        this.comment = comment;
         this.pictures = pictures;
         this.tags = tags;
     }
@@ -82,7 +85,7 @@ public class LocInfoLocationOut {
     }
 
     @JsonProperty("Address")
-    public Address getAddress() {
+    public com.hszg.demo.model.tripadvisor.location.locationPOST.Address getAddress() {
         return address;
     }
 
@@ -112,13 +115,13 @@ public class LocInfoLocationOut {
     }
 
     @JsonProperty("Comments")
-    public Comments getComments() {
-        return comments;
+    public Comment getComments() {
+        return comment;
     }
 
     @JsonProperty("Comments")
-    public void setComments(Comments comments) {
-        this.comments = comments;
+    public void setComments(Comment comment) {
+        this.comment = comment;
     }
 
     @JsonProperty("Pictures")
@@ -177,7 +180,7 @@ public class LocInfoLocationOut {
         sb.append(',');
         sb.append("comments");
         sb.append('=');
-        sb.append(((this.comments == null)?"<null>":this.comments));
+        sb.append(((this.comment == null)?"<null>":this.comment));
         sb.append(',');
         sb.append("pictures");
         sb.append('=');

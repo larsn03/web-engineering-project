@@ -1,3 +1,5 @@
+package com.hszg.demo.model.tripadvisor.location.locationGET;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.annotation.Generated;
@@ -16,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "Text"
 })
 @Generated("jsonschema2pojo")
-public class Comments {
+public class Comment {
 
     @JsonProperty("Username")
     private String username;
@@ -33,10 +35,10 @@ public class Comments {
      * No args constructor for use in serialization
      * 
      */
-    public Comments() {
+    public Comment() {
     }
 
-    public Comments(String username, String rating, String date, String text) {
+    public Comment(String username, String rating, String date, String text) {
         super();
         this.username = username;
         this.rating = rating;
@@ -97,7 +99,7 @@ public class Comments {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(Comments.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append(Comment.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
         sb.append("username");
         sb.append('=');
         sb.append(((this.username == null)?"<null>":this.username));
