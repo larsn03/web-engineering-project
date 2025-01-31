@@ -291,7 +291,6 @@ public class MappingController {
         );
 
         // TODO:
-        //  !!Change API that location name is needed!!
         //  Insert new location into database
 
         String message = "";
